@@ -1,0 +1,11 @@
+<h2>{{model.title}}</h2>
+
+<div class="instruction-hotspots">
+	{{#each model.hotspots as |hotspot|}}
+		{{info-hotspot content=hotspot}}
+	{{/each}}
+</div>
+
+{{audio-player content=model.audio }}
+
+

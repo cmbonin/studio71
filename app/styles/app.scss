@@ -1,0 +1,58 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+@import 'components/audio-player';
+
+html{
+	margin: 0;
+}
+
+html,
+body{
+	height: 100%;
+	min-height: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	color: $body_color;
+	font-family: $body_font;
+	position: relative;
+	background: aliceblue;
+}
+
+h1{
+	font-weight: bold;
+	margin-botom: 10px;
+}
+
+h2{
+	font-weight: bold;
+}
+
+.instruction-hotspots{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.hotspot{
+	position: absolute;
+}
+
+.audio-player{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.audio-player audio{
+	width: 100%;
+}
