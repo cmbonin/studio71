@@ -4,6 +4,14 @@ export default Em.Component.extend({
 	classNames: ['hotspot'],
 	attributeBindings: ['style'],
 
+
+  // hotspot visibility
+  isShowing: false,
+
+  /**
+   * Use the data to postiion the hotspot
+   * @property.style
+   */
 	style: function() {
   	var styles = Object.create({}),
 		  	styleString = '';
@@ -17,5 +25,19 @@ export default Em.Component.extend({
   		}
   	}
   	return Em.String.htmlSafe(styleString);
-  }.property()
+  }.property(),
+
+  /**
+   * Use the data to postiion the hotspot
+   * @property.imageUrl
+   */
+  imageUrl: function (){
+    return 'assets/' + this.get('content.image');
+  }.property(),
+
+  actions: {
+    toggleModal: function() {
+      this.toggleProperty('isShowing');
+    }
+  }
 });

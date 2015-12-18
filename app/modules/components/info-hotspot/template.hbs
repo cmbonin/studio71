@@ -1,1 +1,14 @@
-{{content.title}}
+
+<button {{action "toggleModal"}}>{{content.title}}</button>
+
+{{#if isShowing}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+		<h3>{{content.title}}</h3>
+		<div class="description">{{content.description}}</div>
+		{{#if content.image}}
+		<div class="image"><img src={{imageUrl}} /></div>
+		{{/if}}
+  {{/modal-dialog}}
+{{/if}}

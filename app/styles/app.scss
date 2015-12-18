@@ -4,6 +4,10 @@
 
 @import 'components/audio-player';
 
+// external addons
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 html{
 	margin: 0;
 }
