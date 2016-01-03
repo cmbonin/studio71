@@ -54,9 +54,7 @@ var PopupComponent = Em.Component.extend({
 
    actions: {
    	closePopUp: function () {
-   		console.log('close action');
    		var self = this;
-   		// console.log(Em.$('.pop-up'));
    		Em.$('.pop-up').fadeOut(400, function (){
    			self.set('visible', false);
    		});
