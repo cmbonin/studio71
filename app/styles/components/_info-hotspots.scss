@@ -1,0 +1,12 @@
+.info-hotspot button{
+	background: #fff;
+	box-shadow: none;
+	-webkit-transition: 500ms linear 0s;
+	-moz-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+}
+
+.info-hotspot.highlight button{
+	box-shadow: 2px 2px 2px yellow;
+}

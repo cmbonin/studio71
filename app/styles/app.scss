@@ -2,11 +2,14 @@
 @import 'variables';
 @import 'mixins';
 
+// components
 @import 'components/audio-player';
+@import 'components/pop-up';
+@import 'components/info-hotspots';
 
 // external addons
-@import "ember-modal-dialog/ember-modal-structure";
-@import "ember-modal-dialog/ember-modal-appearance";
+// @import "ember-modal-dialog/ember-modal-structure";
+// @import "ember-modal-dialog/ember-modal-appearance";
 
 html{
 	margin: 0;
@@ -22,8 +25,8 @@ body{
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
-	color: $body_color;
-	font-family: $body_font;
+	color: $bodyColor;
+	font-family: $bodyFont;
 	position: relative;
 	background: aliceblue;
 }
@@ -37,15 +40,33 @@ h2{
 	font-weight: bold;
 }
 
-.instruction-hotspots{
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+#studio71-app {
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
 }
 
-.hotspot{
+#studio71-app .ember-view:first-child{
+	height: 100%;
+	min-height: 100%;
+}
+
+.wrapper{
+	margin: 0 auto;
+	max-width: 1040px;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+.instruction-hotspots{
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+}
+
+.info-hotspot{
 	position: absolute;
 }
 

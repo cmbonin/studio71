@@ -1,12 +1,18 @@
 import Em from 'ember';
 
 export default Em.Component.extend({
-	classNames: ['hotspot'],
+	classNames: ['info-hotspot'],
+  classNameBindings: ['highlight'],
 	attributeBindings: ['style'],
 
+  highlight: Em.computed.oneWay('content.highlighted'),
 
-  // hotspot visibility
+  // popup visibility
   isShowing: false,
+
+  xPos: Em.computed.oneWay('content.xPos'),
+
+  yPos: Em.computed.oneWay('content.xPos'),
 
   /**
    * Use the data to postiion the hotspot
@@ -16,8 +22,8 @@ export default Em.Component.extend({
   	var styles = Object.create({}),
 		  	styleString = '';
 
-  	styles.left = this.get('content.xPos') + 'px';
-  	styles.top = this.get('content.yPos') + 'px';
+  	styles.left = this.get('xPos') + 'px';
+  	styles.top = this.get('yPos') + 'px';
 
   	for (let item in styles) {
   		if (styles.hasOwnProperty(item)) {
@@ -25,14 +31,6 @@ export default Em.Component.extend({
   		}
   	}
   	return Em.String.htmlSafe(styleString);
-  }.property(),
-
-  /**
-   * Use the data to postiion the hotspot
-   * @property.imageUrl
-   */
-  imageUrl: function (){
-    return 'assets/' + this.get('content.image');
   }.property(),
 
   actions: {

@@ -11,6 +11,7 @@ App = Em.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver,
+ 	rootElement: '#studio71-app',
 
 	// holds the sequence of pages
   // @property.sequence

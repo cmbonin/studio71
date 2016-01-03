@@ -3,29 +3,28 @@
 	"audio": "assets/audio.mp3",
 	"hotspots": [{
 		"id": 1,
-		"time": 1,
 		"title": "hotspot 1",
 		"xPos": 100,
 		"yPos": 100,
 		"description": "Description 1",
-		"image": "img1.jpg"
+		"image": "img1.jpg",
+		"trigger": "2"
 	},
 	{
 		"id": 2,
-		"time": 2,
 		"title": "hotspot 2",
 		"xPos": 200,
 		"yPos": 200,
 		"description": "Description 2",
-		"image": "img2.jpg"
+		"image": "img2.jpg",
+		"trigger": "5"
 	},
 	{
 		"id": 3,
-		"time": 3,
 		"title": "hotspot3",
 		"xPos": 300,
 		"yPos": 300,
 		"description": "Description 3",
-		"image": "img3.jpg"
+		"trigger": "10"
 	}]
 }
