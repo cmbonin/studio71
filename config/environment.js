@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'studio71',
     podModulePrefix: 'studio71/modules',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/studio71',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

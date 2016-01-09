@@ -25,7 +25,7 @@ var IntroductionController = Em.Controller.extend({
 				hotspots = this.get('hotspots');
 
 		if(Em.isArray(hotspots)){
-			hotspots.forEach(function (item, index) {
+			hotspots.forEach(function (item) {
 				if (item.trigger){
 					times.push(item.trigger);
 				}
@@ -52,7 +52,8 @@ var IntroductionController = Em.Controller.extend({
 	 * @return void
 	 */
 	highlightHotspot: function(i) {
-		var hotspotIndex = i,
+		var self = this,
+				hotspotIndex = i,
 				hotspots = this.get('hotspots'),
 				hotspot = {};
 		if(hotspots && hotspots[hotspotIndex]) {
