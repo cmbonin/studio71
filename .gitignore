@@ -2,6 +2,7 @@
 
 # compiled output
 /tmp
+/dist/**/*.map
 
 # dependencies
 /node_modules

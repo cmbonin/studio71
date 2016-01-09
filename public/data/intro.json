@@ -1,5 +1,6 @@
 {
 	"title": "Introduction",
+	"instructions": "Listen to the audio & the hotspots will become highlighted at certain points in the audio.",
 	"audio": "assets/audio.mp3",
 	"hotspots": [{
 		"id": 1,

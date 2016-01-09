@@ -150,7 +150,7 @@ define('studio71/modules/application/template', ['exports'], function (exports) 
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("h1");
         dom.setAttribute(el2,"id","site-title");
-        var el3 = dom.createTextNode("Lulu's sweet animation studio");
+        var el3 = dom.createTextNode("Lulu's animation studio prototype");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n\n");
@@ -708,6 +708,7 @@ define('studio71/modules/introduction/model', ['exports', 'ember-data'], functio
 
   exports['default'] = DS['default'].Model.extend({
     title: DS['default'].attr('string'),
+    instructions: DS['default'].attr('string'),
     body: DS['default'].attr('string'),
     audio: DS['default'].attr('string'),
     hostpots: DS['default'].hasMany('hotspot')
@@ -803,7 +804,13 @@ define('studio71/modules/introduction/template', ['exports'], function (exports)
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("p");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1,"class","instruction-hotspots");
@@ -821,14 +828,16 @@ define('studio71/modules/introduction/template', ['exports'], function (exports)
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(3);
+        var morphs = new Array(4);
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]),0,0);
-        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2]),1,1);
-        morphs[2] = dom.createMorphAt(fragment,4,4,contextualElement);
+        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2]),0,0);
+        morphs[2] = dom.createMorphAt(dom.childAt(fragment, [4]),1,1);
+        morphs[3] = dom.createMorphAt(fragment,6,6,contextualElement);
         return morphs;
       },
       statements: [
         ["content","model.title",["loc",[null,[1,4],[1,19]]]],
+        ["content","model.instructions",["loc",[null,[2,3],[2,25]]]],
         ["block","each",[["get","hotspots",["loc",[null,[4,9],[4,17]]]]],[],0,null,["loc",[null,[4,1],[6,10]]]],
         ["inline","audio-player",[],["content",["subexpr","@mut",[["get","model.audio",["loc",[null,[8,23],[8,34]]]]],[],[]],"triggers",["subexpr","@mut",[["get","hotspotTriggers",["loc",[null,[8,44],[8,59]]]]],[],[]],"control",["subexpr","@mut",[["get","this",["loc",[null,[8,68],[8,72]]]]],[],[]]],["loc",[null,[8,0],[8,74]]]]
       ],
@@ -1841,7 +1850,7 @@ catch(err) {
 if (runningTests) {
   require("studio71/tests/test-helper");
 } else {
-  require("studio71/app")["default"].create({"name":"studio71","version":"0.0.0+05fd342a"});
+  require("studio71/app")["default"].create({"name":"studio71","version":"0.0.0+8476269a"});
 }
 
 /* jshint ignore:end */
