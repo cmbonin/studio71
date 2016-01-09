@@ -1850,7 +1850,7 @@ catch(err) {
 if (runningTests) {
   require("studio71/tests/test-helper");
 } else {
-  require("studio71/app")["default"].create({"name":"studio71","version":"0.0.0+733404f1"});
+  require("studio71/app")["default"].create({"name":"studio71","version":"0.0.0+12bd51fa"});
 }
 
 /* jshint ignore:end */
