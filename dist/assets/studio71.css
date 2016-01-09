@@ -1,0 +1,153 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.audio-player {
+  display: block; }
+
+.pop-up {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  position: absolute;
+  z-index: 100;
+  box-shadow: 0px 2px 2px #999; }
+
+.pop-up .close-popup {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  cursor: pointer; }
+  .pop-up .close-popup:after {
+    content: '\00d7';
+    display: block;
+    visibility: visible;
+    font-size: 150%; }
+  .pop-up .close-popup:hover:after {
+    color: #666; }
+
+.pop-up h3 {
+  font-weight: bold;
+  font-size: 110%;
+  margin: 0 0 10px 0; }
+
+.pop-up .description {
+  margin: 0 0 10px 0; }
+
+.pop-up img {
+  max-width: 100%; }
+
+.info-hotspot button {
+  background: #fff;
+  box-shadow: none;
+  -webkit-transition: 500ms linear 0s;
+  -moz-transition: 500ms linear 0s;
+  -o-transition: 500ms linear 0s;
+  transition: 500ms linear 0s; }
+
+.info-hotspot.highlight button {
+  box-shadow: 2px 2px 2px yellow; }
+
+html {
+  margin: 0; }
+
+html,
+body {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #000;
+  font-family: arial, sans-serif;
+  position: relative;
+  background: aliceblue; }
+
+h1 {
+  font-weight: bold;
+  margin-botom: 10px; }
+
+h2 {
+  font-weight: bold; }
+
+#studio71-app {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
+#studio71-app .ember-view:first-child {
+  height: 100%;
+  min-height: 100%; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1040px;
+  height: 100%;
+  min-height: 100%;
+  position: relative; }
+
+.instruction-hotspots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%; }
+
+.info-hotspot {
+  position: absolute; }
+
+.audio-player {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+.audio-player audio {
+  width: 100%; }
+
+/*# sourceMappingURL=studio71.css.map */
